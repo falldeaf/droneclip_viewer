@@ -1,5 +1,8 @@
 # DJI Drone Clip Viewer
 
+[![Video Title](http://img.youtube.com/vi/9KVybWNTqW0/0.jpg)](http://www.youtube.com/watch?v=9KVybWNTqW0 "Video Title")
+
+
 ## Introduction
 
 The DJI Drone Clip Viewer is an interactive tool designed for drone enthusiasts to view and analyze their flight data in synchrony with their drone footage. It utilizes a Node.js backend to serve a dynamic user interface that presents a rich set of information and controls.
