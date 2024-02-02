@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Layout</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar-left">
+			<span>Falldeaf's DJI Drone Viewer</span>
+		</div>
+		<div class="navbar-right">
+			<input id="current-directory" type="text" id="dirPath" placeholder="Directory Path">
+			<button id="directory"><i class="fas fa-folder-open"></i></button>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="data-display">
+			<i class="fas fa-chart-bar"></i>
+			<div class="coordinates">
+				<p>Lat: <span id="latitude">-</span></p>
+				<p>Lon: <span id="longitude">-</span></p>
+			</div>
+			<div class="bar-labels">
+				<div class="bar-label">REL</div>
+				<div class="bar-label">CEL</div>
+			</div>
+			<div class="altitude-container">
+				<div id="alt1" class="altitude-bar" style="height: 0%;"> <!-- Adjust height based on altitude -->
+					<div id="alt1-value">-</div>
+					<span id="altitude1"></span>
+				</div>
+
+				<div id="alt2" class="altitude-bar" style="height: 0%;"> <!-- Adjust height for the second bar -->
+					<div id="alt2-value">-</div>
+					<span id="altitude2"></span>
+				</div>
+			</div>
+		</div>
+		<div id="map" class="map"></div>
+		<div class="video">
+			<video id="videoPlayer" width="1024" height="576">
+				<!--<source src="DJI_20240115163315_0007_D.MP4" type="video/mp4">-->
+				<!-- <track id="subtitleTrack" src="test.vtt" kind="subtitles" srclang="en" label="English" default> -->
+				<!-- <track id="subtitleTrack" src="" kind="subtitles" srclang="en" label="English" default> -->
+				Your browser does not support the video tag.
+			</video>
+		</div>
+
+		<div class="control-box">
+				<!-- Play, Pause, Stop Buttons -->
+				<button id="play"><i class="fa fa-play"></i></button>
+				<button id="pause"><i class="fa fa-pause"></i></button>
+				<button id="stop"><i class="fa fa-stop"></i></button>
+
+				<!-- Scrubber -->
+				<input id="scrubber" type="range" id="scrubber" name="scrubber" min="0" max="100" value="0">
+
+				<!-- Previous, Next Buttons -->
+				<button id="previous"><i class="fa fa-step-backward"></i></button>
+				<button id="next"><i class="fa fa-step-forward"></i></button>
+
+				<!-- Download Button -->
+				<button id="download"><i class="fa fa-download"></i></button>
+
+				<!-- Dropdown Selector with Load Button -->
+				<select id="videoSelector">
+					<!-- Add more options as needed -->
+				</select>
+				<button id="load">Load</button>
+		</div>
+	</div>
+
+	<script src="behavior.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjg3ANbowfn6fLY_OwmGn7xznUEaIf2Ug&callback=initMap"></script>
+</body>
+</html>

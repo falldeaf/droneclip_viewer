@@ -1,0 +1,239 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #282a36; /* Dracula background */
+	color: #f8f8f2; /* Dracula foreground */
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #44475a; /* Dracula background */
+    padding: 10px 10px;
+    color: #f8f8f2; /* Dracula foreground */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #44475a; /* Dracula comment */
+    border: none;
+    color: #f8f8f2; /* Dracula foreground */
+    border-radius: 3px;
+}
+
+.navbar-right button {
+    background-color: #6272a4; /* Dracula selection */
+    border: none;
+    padding: 5px 10px;
+    color: #f8f8f2; /* Dracula foreground */
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.navbar-right button:hover {
+    background-color: #50fa7b; /* Dracula cyan */
+}
+
+.container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+.map, .video, .data-display {
+	border: 1px solid #44475a; /* Dracula current line */
+	border-radius: 4px;
+	padding: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	background-color: #44475a; /* Dracula current line */
+	margin: 5px;
+}
+
+.map {
+	flex: 1.5;
+	max-width: 576px;
+	height: 576px;
+	background-color: #6272a4; /* Dracula comment */
+}
+
+.video video{
+	flex: 2;
+	max-width: 1024px;
+	height: 576px;
+	/* background-color: #6272a4; */
+}
+
+.video video {
+	border-radius: 5px;
+}
+
+.data-display {
+	flex: 0.5;
+	max-width: 170px;
+	height: 576px;
+}
+
+.data-display i {
+	font-size: 34px;
+	color: #50fa7b; /* Dracula Green */
+	padding: 10px;
+	display: block;
+	text-align: center;
+}
+
+.coordinates {
+	margin-bottom: 20px;
+}
+
+.altitude {
+	width: 100%;
+	height: 400px;
+	background-color: #383a59; /* Dracula selection */
+	position: relative;
+}
+
+.altitude-container {
+	display: flex;
+	height: 400px;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #383a59; /* Dracula selection */
+}
+
+.altitude-bar {
+	flex: 1;
+	background-color: #8be9fd; /* Dracula cyan */
+	margin-right: 5px;
+	align-self: flex-end;
+	border-radius: 5px;
+}
+
+.altitude-bar span {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.altitude-bar:last-child {
+	margin-right: 0;
+}
+
+.bar-labels {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: #44475a; /* Dracula current line */
+}
+
+#alt1 {
+	background-color: #ff79c6; /* Dracula pink */
+}
+
+#alt2 {
+	background-color: #50fa7b; /* Dracula green */
+}
+
+.bar-label {
+	position: relative;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.control-box {
+	width: 96.5%;
+	padding: 15px;
+	margin-top: 20px;
+	background-color: #44475a; /* Dracula current line */
+	border: 1px solid #44475a; /* Dracula current line */
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	color: #f8f8f2; /* Dracula foreground */
+}
+
+.control-box button {
+	margin: 5px;
+	font-size: 24px;
+	background-color: #383a59; /* Dracula current line */
+	color: #ffb86c; /* Dracula foreground */
+	border: 1px solid;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.control-box button:hover {
+	background-color: #6272a4; /* Dracula comment */
+}
+
+.control-box select {
+	background-color: #6272a4; /* Dracula comment */
+	color: #f8f8f2; /* Dracula foreground */
+	border: none;
+	height: 33px;
+	padding: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.control-box input[type=range] {
+	width: 200px;
+	margin: 10px 0;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+/* Styles the track of the range input */
+input[type=range]::-webkit-slider-runnable-track {
+	background: #6272a4; /* Dracula comment for the track */
+	height: 8px;
+	border-radius: 4px;
+}
+
+input[type=range]::-moz-range-track {
+	background: #6272a4; /* Dracula comment for the track */
+	height: 8px;
+	border-radius: 4px;
+}
+
+/* Styles the thumb of the range input */
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Removes default styles */
+	color: #ff79c6; /* Dracula pink for the thumb */
+	background: #ff79c6; /* Dracula pink for the thumb */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-appearance: none; /* Removes default webkit styles */
+	margin-top: -6px; /* Aligns thumb with the track */
+}
+
+input[type=range]::-moz-range-thumb {
+	background: #ff79c6; /* Dracula pink for the thumb */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+}
